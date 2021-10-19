@@ -5,7 +5,9 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "MakerBit-IR-Receiver": "github:1010Technologies/pxt-makerbit-ir-receiver#v1.5.13"
+        "MakerBit-IR-Receiver": "github:1010Technologies/pxt-makerbit-ir-receiver#v1.5.13",
+        "sbit-controler": "github:ryott2/legocrane-sbit-controler#master",
+        "SuperBit": "github:lzty634158/SuperBit#0a0d6cd2c18804f6b56e944d0c7ff7bd91473ec8"
     },
     "files": [
         "main.ts",
