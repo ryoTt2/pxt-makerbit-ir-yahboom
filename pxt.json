@@ -1,0 +1,33 @@
+{
+    "name": "pxt-makerbit-ir-yahboom",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "MakerBit-IR-Receiver": "github:1010Technologies/pxt-makerbit-ir-receiver#v1.5.13"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "main.blocks"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v4.0.11",
+        "tag": "v4.0.11",
+        "commits": "https://github.com/microsoft/pxt-microbit/commits/2b9dd6f9b1588b4ad95673b458b3a6eb156bfbd7",
+        "target": "4.0.11",
+        "pxt": "7.0.8",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj",
+    "yotta": {
+        "ignoreConflicts": true
+    }
+}
