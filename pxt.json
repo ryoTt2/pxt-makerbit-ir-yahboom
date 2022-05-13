@@ -1,5 +1,5 @@
 {
-    "name": "legocrane-makerbit-ir-yahboom",
+    "name": "legoshovel-makerbit-ir-yahboom",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -21,7 +21,7 @@
         "branch": "v4.0.11",
         "tag": "v4.0.11",
         "commits": "https://github.com/microsoft/pxt-microbit/commits/2b9dd6f9b1588b4ad95673b458b3a6eb156bfbd7",
-        "target": "4.0.11",
+        "target": "4.0.18",
         "pxt": "7.0.8",
         "targetId": "microbit"
     },

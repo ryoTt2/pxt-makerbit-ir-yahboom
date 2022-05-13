@@ -58,6 +58,10 @@ makerbit.onIrButton(IrButton.Any, IrButtonAction.Pressed, function () {
             `)
         SuperBit.MotorRun(SuperBit.enMotors.M3, 99)
     } else if (makerbit.irButton() == CLOCK) {
+    	
+    } else if (makerbit.irButton() == PLUS) {
+        basic.showString("+")
+        SuperBit.MotorRun(SuperBit.enMotors.M4, 99)
         basic.showLeds(`
             . # # # .
             # . . . #
@@ -66,9 +70,6 @@ makerbit.onIrButton(IrButton.Any, IrButtonAction.Pressed, function () {
             . . # # #
             `)
         SuperBit.MotorRun(SuperBit.enMotors.M3, -99)
-    } else if (makerbit.irButton() == PLUS) {
-        basic.showString("+")
-        SuperBit.MotorRun(SuperBit.enMotors.M4, 99)
     } else if (makerbit.irButton() == MINUS) {
         basic.showString("-")
         SuperBit.MotorRun(SuperBit.enMotors.M4, -99)
