@@ -2,14 +2,18 @@ input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.Heart)
 })
 makerbit.onIrButton(IrButton.Any, IrButtonAction.Released, function () {
-    SuperBit.MotorStopAll()
-    basic.showLeds(`
-        # . . . .
-        . . # . #
-        # . # # .
-        # . # . .
-        # . # . .
-        `)
+    if (makerbit.irButton() == LEFT || makerbit.irButton() == RIGHT) {
+        SuperBit.MotorRun(SuperBit.enMotors.M2, 0)
+        basic.showLeds(`
+            # . . . .
+            . . # . #
+            # . # # .
+            # . # . .
+            # . # . .
+            `)
+    } else {
+    	
+    }
 })
 makerbit.onIrButton(IrButton.Any, IrButtonAction.Pressed, function () {
     if (makerbit.irButton() == UP) {
@@ -38,7 +42,7 @@ makerbit.onIrButton(IrButton.Any, IrButtonAction.Pressed, function () {
             . . # # .
             . . . # .
             `)
-        SuperBit.MotorRun(SuperBit.enMotors.M2, 99)
+        SuperBit.MotorRun(SuperBit.enMotors.M2, -80)
     } else if (makerbit.irButton() == RIGHT) {
         basic.showLeds(`
             . # . . .
@@ -47,7 +51,7 @@ makerbit.onIrButton(IrButton.Any, IrButtonAction.Pressed, function () {
             . # # . .
             . # . . .
             `)
-        SuperBit.MotorRun(SuperBit.enMotors.M2, -99)
+        SuperBit.MotorRun(SuperBit.enMotors.M2, 80)
     } else if (makerbit.irButton() == ANTICLOCK) {
         basic.showLeds(`
             # . # # .
@@ -73,6 +77,8 @@ makerbit.onIrButton(IrButton.Any, IrButtonAction.Pressed, function () {
     } else if (makerbit.irButton() == MINUS) {
         basic.showString("-")
         SuperBit.MotorRun(SuperBit.enMotors.M4, -99)
+    } else if (makerbit.irButton() == SPEAKER) {
+        SuperBit.MotorStopAll()
     } else {
     	
     }
@@ -86,6 +92,7 @@ let CLOCK = 0
 let DOWN = 0
 let ANTICLOCK = 0
 let RIGHT = 0
+let SPEAKER = 0
 let LEFT = 0
 let UP = 0
 makerbit.connectIrReceiver(DigitalPin.P1, IrProtocol.Keyestudio)
@@ -93,7 +100,7 @@ let POWER = 0
 UP = 128
 let BULB = 64
 LEFT = 32
-let SPEAKER = 160
+SPEAKER = 160
 RIGHT = 96
 ANTICLOCK = 16
 DOWN = 144
